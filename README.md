@@ -19,4 +19,3 @@ Les formulaires ne transmettent aucune donnée. Les références et cas clients 
 Cette version est destinée à la revue UX. Avant publication en tant que site d'entreprise, il faudra renseigner le nom, les coordonnées, la zone d'intervention, les prestations et qualifications exactes, les références autorisées, les textes de l'histoire familiale, l'URL Formation, les mentions légales et le traitement réel des formulaires.
 
 Les maquettes Figma ne font pas partie de ce dépôt et n'ont pas été modifiées pour cette publication.
-
