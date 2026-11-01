@@ -56,4 +56,3 @@ document.querySelector('.menu').onclick=()=>{const open=document.querySelector('
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.querySelector('#navigation').classList.contains('open')){document.querySelector('#navigation').classList.remove('open');document.querySelector('.menu').setAttribute('aria-expanded','false');document.querySelector('.menu').focus()}});
 document.querySelector('.skip').addEventListener('click',e=>{e.preventDefault();main.focus();main.scrollIntoView()});window.addEventListener('hashchange',route);route();
 </script></body></html>
-
