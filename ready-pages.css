@@ -39,8 +39,8 @@ body.ready-mode #main{width:100%;max-width:none;min-height:0;margin:0;padding:0}
 .ready-cta a{display:inline-flex;align-items:center;height:53px;padding:0 21px;background:#102c9a;color:#fff;font-size:14px;font-weight:600;text-decoration:none}
 .ready-footer{min-height:358px;background:#25262a;color:#fff;padding:52px 0 44px}
 .ready-footer-inner{max-width:1260px;width:calc(100% - 180px);margin:0 auto;display:grid;grid-template-columns:1.55fr 1fr 1fr 1fr;gap:55px}
-.ready-footer .ready-brand{gap:12px;margin-bottom:22px}
-.ready-footer .ready-brand img{width:68px;height:68px;padding:5px;background:#fff;filter:grayscale(1) brightness(0)}
+.ready-footer .ready-brand{gap:12px;margin-bottom:22px;background:linear-gradient(#fff,#fff) left center/68px 68px no-repeat}
+.ready-footer .ready-brand img{width:68px;height:68px;padding:5px;filter:grayscale(1) brightness(0)}
 .ready-footer .ready-brand span{font-size:42px;color:#fff}
 .ready-footer p{font-size:13px;line-height:1.45;margin:0 0 17px;color:#e6e6e6}
 .ready-footer-inner>div:not(:first-child){padding-top:6px}
@@ -58,12 +58,13 @@ body.ready-mode #main{width:100%;max-width:none;min-height:0;margin:0;padding:0}
 .ready-accordion-layout{display:grid;grid-template-columns:1fr 1fr;gap:53px}
 .ready-accordion-layout h2{max-width:600px}
 .ready-accordion{width:100%}
-.ready-accordion details{background:#e4e7ec;border-bottom:1px solid #111}
+.ready-accordion details{background:#e4e7ec;border-bottom:1px solid #111;padding:0}
 .ready-accordion details[open]{background:#102e9c;border-bottom:0;color:#fff}
 .ready-accordion summary{display:block;cursor:pointer;list-style:none;padding:15px 20px;font-size:24px;font-weight:600;line-height:1.5}
 .ready-accordion summary::-webkit-details-marker{display:none}
 .ready-accordion details[open] summary{padding-bottom:9px}
-.ready-accordion details p{font-size:16px;line-height:1.6;padding:0 20px 18px}
+.ready-accordion details p{font-size:16px;line-height:1.6;padding:0 20px 18px;margin:0}
+.ready-accordion details[open] p{color:#fff}
 .ready-fire-intro{min-height:650px;padding-top:98px}
 .ready-fire-intro .ready-three-columns{margin-top:75px}
 .ready-fire-intro article h3{font-size:26px;max-width:360px}
