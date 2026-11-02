@@ -12,15 +12,19 @@ function policyPage(key, title, summary, content) {
 function legal() {
   return policyPage('mentions-legales', 'Mentions légales', 'Les informations essentielles sur l’éditeur du site, son hébergement et son activité de sécurité privée.', `
     <section class="legal-card"><h2>Éditeur du site</h2><dl>
-      <dt>Raison sociale</dt><dd>[RAISON SOCIALE]</dd>
-      <dt>Forme juridique</dt><dd>[FORME JURIDIQUE]</dd>
-      <dt>Capital social</dt><dd>[MONTANT DU CAPITAL SOCIAL]</dd>
-      <dt>Siège social</dt><dd>[ADRESSE COMPLÈTE DU SIÈGE SOCIAL]</dd>
-      <dt>Immatriculation</dt><dd>[NUMÉRO SIREN / SIRET, RCS OU RNE ET VILLE D’IMMATRICULATION]</dd>
-      <dt>TVA intracommunautaire, si applicable</dt><dd>[NUMÉRO DE TVA]</dd>
+      <dt>Raison sociale</dt><dd>YD SECURITE</dd>
+      <dt>Forme juridique</dt><dd>Société par actions simplifiée (SAS)</dd>
+      <dt>Président</dt><dd>Yann PICHON</dd>
+      <dt>Capital social</dt><dd>1 000 €</dd>
+      <dt>Siège social</dt><dd>CHEZ DAMIEN SARL, 2 RUE DES COMMERES, 78310 COIGNIERES, France</dd>
+      <dt>SIREN</dt><dd>890 509 946</dd>
+      <dt>SIRET du siège social</dt><dd>890 509 946 00012</dd>
+      <dt>Immatriculation</dt><dd>Registre national des entreprises (RNE), le 29 octobre 2020</dd>
+      <dt>TVA intracommunautaire</dt><dd>FR82 890 509 946</dd>
+      <dt>Activité principale</dt><dd>Activités de sécurité privée (code APE 80.10Z)</dd>
       <dt>Courriel</dt><dd>[ADRESSE E-MAIL DE CONTACT]</dd>
       <dt>Téléphone</dt><dd>[NUMÉRO DE TÉLÉPHONE]</dd>
-    </dl></section>
+    </dl><p>Informations d’identification vérifiées le 2 novembre 2026 dans <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/yd-securite-890509946" target="_blank" rel="noopener noreferrer">l’Annuaire des entreprises</a>.</p></section>
     <section class="legal-card"><h2>Publication et hébergement</h2><dl>
       <dt>Direction de la publication</dt><dd>[NOM ET PRÉNOM]</dd>
       <dt>Responsable de la rédaction, le cas échéant</dt><dd>[NOM ET PRÉNOM OU SANS OBJET]</dd>
