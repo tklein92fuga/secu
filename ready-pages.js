@@ -78,3 +78,29 @@ function readyService(id) {
   if(!content[id])return '';
   return `<div class="ready-page ready-${id}">${readyHeader(id)}${readyHero(titles[id])}<div class="ready-content">${content[id]()}</div>${readyCta()}${readyFooter()}</div>`;
 }
+
+function readyEnhanceNavigation() {
+  const root = document.querySelector('#main .ready-page');
+  if (!root || !window.gsap) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.querySelectorAll('.ready-main-nav a, .ready-tabs a').forEach(link => {
+    if (link.dataset.readyAnimated || link.getAttribute('aria-disabled') === 'true') return;
+    link.dataset.readyAnimated = 'true';
+    const selected = link.classList.contains('active') || link.getAttribute('aria-current') === 'page';
+    if (selected && !reducedMotion) {
+      gsap.fromTo(link, {borderBottomColor: 'transparent'}, {borderBottomColor: '#091c8d', duration: .28, ease: 'power2.out', clearProps: 'borderBottomColor'});
+    }
+    if (selected || reducedMotion) return;
+    const baseColor = getComputedStyle(link).color;
+    link.addEventListener('pointerenter', () => gsap.to(link, {color: '#1033a8', duration: .18, ease: 'power2.out', overwrite: 'auto'}));
+    link.addEventListener('pointerleave', () => gsap.to(link, {color: baseColor, duration: .18, ease: 'power2.out', overwrite: 'auto', onComplete: () => gsap.set(link, {clearProps: 'color'})}));
+    link.addEventListener('pointerdown', () => gsap.to(link, {color: '#071b83', duration: .08, overwrite: 'auto'}));
+    link.addEventListener('pointerup', () => gsap.to(link, {color: '#1033a8', duration: .12, overwrite: 'auto'}));
+  });
+}
+
+new MutationObserver(readyEnhanceNavigation).observe(document.getElementById('main'), {childList: true});
+const readyGsapScript = document.createElement('script');
+readyGsapScript.src = 'assets/vendor/gsap.min.js';
+readyGsapScript.onload = readyEnhanceNavigation;
+document.head.appendChild(readyGsapScript);
