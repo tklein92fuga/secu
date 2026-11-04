@@ -1,4 +1,4 @@
-const readyPageIds = ['prevention', 'incendie', 'evenementiel'];
+const readyPageIds = ['prevention', 'incendie', 'evenementiel', 'cynophile'];
 const readyDebt = "La dette publique désigne l'ensemble des emprunts contractés par les administrations";
 const readyDebtLong = "La dette publique désigne l'ensemble des emprunts contractés par les administrations publiques (l'État, les collectivités territoriales, la Sécurité sociale) pour financer leurs dépenses.";
 const readyErp = "Commerces, hôtels, salle de spectacles, établissements d’enseignement : la présence d’agents qualifiés peut être exigée selon la catégorie";
@@ -8,7 +8,7 @@ function readyHeader(active) {
     ['prevention', 'Sécurité & prévention', 'metiers'],
     ['incendie', 'Sécurité incendie', 'metiers/incendie'],
     ['evenementiel', 'Sécurité événementiels', 'metiers/evenementiel'],
-    ['cynophile', 'Agen cynophile', 'metiers/cynophile']
+    ['cynophile', 'Agent Cynophile', 'metiers/cynophile']
   ];
   return `<header class="ready-header"><a class="ready-brand" href="#/" aria-label="YD Securite, accueil"><img src="assets/yd-logo.png" width="48" height="48" alt=""><span>YD SECURITE</span></a><nav class="ready-main-nav" aria-label="Navigation principale"><a class="active" href="#/metiers">Nos métiers</a><a href="#/approche">Notre approche</a><a href="#/references">Références</a><a href="#/histoire">Notre histoire</a><a href="#/formation">Recrutement</a></nav><a class="ready-contact" href="#/contact">Parlons de votre besoin</a></header><nav class="ready-tabs" aria-label="Nos métiers"><div>${tabs.map(([id,label,route])=>`<a href="#/${route}" ${id===active?'aria-current="page"':''}>${label}</a>`).join('')}</div></nav>`;
 }
@@ -57,9 +57,23 @@ function readyPrevention() {
   <section class="ready-prevention-journey"><div class="ready-container"><div class="ready-section-heading"><h2>La parcours du public,<br>de l’arrivée à la sortie.</h2><p>${readyDebt}</p></div>${readyGray('ready-wide-gray')}<div class="ready-four-columns">${Array.from({length:4},()=>`<article><h3>Accueil & orientation</h3><p>${readyDebt}</p></article>`).join('')}</div></div></section>${readyAccordion()}`;
 }
 
+function readyCynophile() {
+  const short = "La dette publique désigne l'ensemble.";
+  const bullets = count => `<ul>${Array.from({length:count},()=>`<li>${short}</li>`).join('')}</ul>`;
+  const lines = count => `<p>${Array.from({length:count},()=>short).join('<br>')}</p>`;
+  const heading = (title, description) => `<div class="ready-section-heading"><h2>${title}</h2><p>${description}</p></div>`;
+  return `<section class="ready-cyno-intro"><div class="ready-container">${heading('Une présence adaptée à la<br>vie de votre site','La sécurité et prévention repose sur un principe simple : être là au bon moment, au bon endroit avec la bonne posture.')}<div class="ready-two-columns">${readyGray()}<div class="ready-cyno-contributions"><article><h3>L’agent apporte</h3>${bullets(4)}</article><article><h3>Le chien apporte</h3>${bullets(4)}</article></div></div></div></section>
+  <section class="ready-cyno-effects"><div class="ready-container">${heading('Trois effets sur la sécurité<br>de votre site',readyDebt)}<div class="ready-three-columns">${['Dissuader','Détecter','Appuyer'].map(label=>`<article><h3>${label}</h3><p>${readyDebt}</p></article>`).join('')}</div></div></section>
+  <section class="ready-cyno-hours"><div class="ready-container">${heading('Un dispositif qui s’adapte à<br>l’heure.','Un concert, un salon et une soirée d’entreprise ne demandent ni la même présence, ni la même organisation. Notre mission se déroule en trois temps.')}<div class="ready-two-columns">${['De jour','De nuit'].map(label=>`<article><h3>${label}</h3>${bullets(4)}</article>`).join('')}</div></div></section>
+  <section class="ready-cyno-choice"><div class="ready-container">${heading('Quand privilégier un<br>binôme cynophile ?','Un concert, un salon et une soirée d’entreprise ne demandent ni la même présence, ni la même organisation. Notre mission se déroule en trois temps.')}<div class="ready-two-columns">${['Un binôme particulièrement adapté','Un autre dispositif souvent plus flexible'].map(label=>`<article><h3>${label}</h3>${lines(4)}</article>`).join('')}</div></div></section>
+  <section class="ready-cyno-welfare"><div class="ready-container ready-two-columns"><div><h2>Le bien-être du chien fait<br>partie du dispositif.</h2><article><h3>Accueil & orientation</h3><p>${readyDebt}</p>${bullets(4)}</article></div>${readyGray()}</div></section>
+  <section class="ready-cyno-faq"><div class="ready-container ready-accordion-layout"><h2>Vos questions, nos<br>réponses</h2><div class="ready-accordion">${Array.from({length:5},(_,i)=>`<details ${i===0?'open':''}><summary>Sécurité Incendie</summary><p>${readyDebtLong}</p>${i===0?'<a href="#/contact">Échanger sur ce besoin ↗</a>':''}</details>`).join('')}</div></div></section>`;
+}
+
 function readyService(id) {
-  const titles={prevention:'Sécurité & Prévention',incendie:'Sécurité incendie',evenementiel:'Sécurité événementiel'};
-  const content={prevention:readyPrevention,incendie:readyFire,evenementiel:readyEvent};
+  const titles={prevention:'Sécurité & Prévention',incendie:'Sécurité incendie',evenementiel:'Sécurité événementiel',cynophile:'Agent Cynophile'};
+  const content={prevention:readyPrevention,incendie:readyFire,evenementiel:readyEvent,cynophile:readyCynophile};
   if(!content[id])return '';
   return `<div class="ready-page ready-${id}">${readyHeader(id)}${readyHero(titles[id])}<div class="ready-content">${content[id]()}</div>${readyCta()}${readyFooter()}</div>`;
 }
+
