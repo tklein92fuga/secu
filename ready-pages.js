@@ -23,7 +23,9 @@ function readyCta() {
 
 function readyFooter() {
   const discover = `<div><span>Découvrir</span><a href="#/metiers">Nos métiers</a><a href="#/approche">Notre approche</a><a href="#/references">Références & cas clients</a><a href="#/histoire">Notre histoire</a></div>`;
-  return `<footer class="ready-footer"><div class="ready-footer-inner"><div class="ready-footer-brand"><a class="ready-brand" href="#/"><img src="assets/yd-logo.png" width="68" height="68" alt=""><span>YD SECURITE</span></a><p>Une entreprise familiale.<br>Plus de 30 ans d’expérience à vos côtés.</p><p>Interventions étudiées selon votre site et votre zone géographique.</p></div>${discover}${discover}<div><span>Échanger</span><a href="#/contact">Contact / demande de devis</a><a href="#/formation">Rejoindre l’équipe</a><a href="#/contact?objet=partenariat">Proposer un partenariat</a><a href="#/plan">Plan du site & notes</a></div></div></footer>`;
+  const exchange = `<div><span>Échanger</span><a href="#/contact">Contact / demande de devis</a><a href="#/formation">Rejoindre l’équipe</a><a href="#/contact?objet=partenariat">Proposer un partenariat</a><a href="#/plan">Plan du site & notes</a></div>`;
+  const legal = `<div><span>Mentions légales</span><a href="#/mentions-legales">Informations légales</a><a href="#/confidentialite">Politique de confidentialité</a><a href="#/cookies">Politique cookies</a><a href="#/signalement-securite">Divulgation responsable</a></div>`;
+  return `<footer class="ready-footer"><div class="ready-footer-inner"><div class="ready-footer-brand"><a class="ready-brand" href="#/"><img src="assets/yd-logo.png" width="68" height="68" alt=""><span>YD SECURITE</span></a><p>Une entreprise familiale.<br>Plus de 30 ans d’expérience à vos côtés.</p><p>Interventions étudiées selon votre site et votre zone géographique.</p></div>${discover}${exchange}${legal}</div></footer>`;
 }
 
 function readyGray(className='') {
