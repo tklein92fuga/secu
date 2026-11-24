@@ -1337,3 +1337,44 @@
 .yd-ct-ico{flex:none;display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#fff;color:#03137f;font-size:20px;line-height:1;font-weight:700}
 .yd-ct-status.is-error .yd-ct-ico{background:#a11b2b;color:#fff}
 .yd-ct-cand-card .yd-ct-ico{width:28px;height:28px;font-size:16px}
+
+/* En-tête et onglets unifiés sur la page Références (toutes les pages intérieures). */
+@media(min-width:601px){
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-main-nav a{line-height:42px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-main-nav a[aria-current=page]{color:#03137f;border-color:#03137f;font-weight:700;border-bottom-width:2px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand span{letter-spacing:-2px}
+}
+@media(min-width:1101px){
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header{height:91px;gap:28px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand{gap:13px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand img{width:55px;height:60px;margin:0}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand span{font-size:39px;line-height:39px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header-button{margin-left:-2px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs{height:86px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs>div{gap:20px;padding-left:1px}
+}
+@media(min-width:601px) and (max-width:1100px){
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header{gap:14px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-main-nav{gap:15px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-main-nav a{padding:0}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header-button{margin-left:0}
+}
+@media(min-width:601px) and (max-width:800px){
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand img{width:40px;height:46px;margin:0}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand span{font-size:25px;line-height:25px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs{height:70px}
+}
+@media(min-width:801px) and (max-width:1100px){
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand img{width:55px;height:60px;margin:0}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand span{font-size:30px;line-height:30px}
+}
+@media(min-width:601px){
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs{background:#e5e8ec}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs a{height:42px;padding:0 13px;font-weight:500}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs a[aria-current=page]{font-weight:700;border-bottom-width:2px;color:#03137f;border-color:#03137f}
+}
+@media(min-width:601px){
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header{height:91px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand{gap:13px}
+  .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs>div{gap:20px;padding-left:1px}
+}

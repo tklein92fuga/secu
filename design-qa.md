@@ -153,3 +153,8 @@ Règle retenue : les maquettes priment sur le design system. Seules les correcti
 - Hauteurs de page inchangées à 1440, 1024 et 390 px.
 
 Écarts conservés volontairement (maquettes prioritaires) : tailles de titres et de texte, navigation 18 px, boutons du bandeau final, espacements hors grille de 4 px, angles droits, bouton secondaire bleu, confirmation d'envoi en bleu.
+
+## Largeur > 1440 px et en-tête unifié (24/11/2026)
+
+- Au-delà de 1440 px, la composition 1440 est agrandie proportionnellement (zoom calculé sur la largeur de la fenêtre) : plus de marges latérales, rendu identique à 1440. Vérifié à 1920 et 2560 px, sans défilement horizontal.
+- En-tête et onglets de toutes les pages intérieures (Métiers, Approche, Contact, Candidature, pages légales) alignés sur Références : en-tête 91 px, logo 55 × 60 et texte 39 px, onglets gris #E5E8EC de 42 px, onglet actif en gras souligné 2 px. Vérifié à 1440, 1024 et 768 px ; mobile inchangé.
