@@ -1,6 +1,6 @@
 const policyStylesheet = document.createElement('link');
 policyStylesheet.rel = 'stylesheet';
-policyStylesheet.href = 'policies.css?v=20261102b';
+policyStylesheet.href = 'policies.css?v=20261124ds';
 document.head.append(policyStylesheet);
 
 const policyLinks = [
