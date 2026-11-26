@@ -158,3 +158,11 @@ Règle retenue : les maquettes priment sur le design system. Seules les correcti
 
 - Au-delà de 1440 px, la composition 1440 est agrandie proportionnellement (zoom calculé sur la largeur de la fenêtre) : plus de marges latérales, rendu identique à 1440. Vérifié à 1920 et 2560 px, sans défilement horizontal.
 - En-tête et onglets de toutes les pages intérieures (Métiers, Approche, Contact, Candidature, pages légales) alignés sur Références : en-tête 91 px, logo 55 × 60 et texte 39 px, onglets gris #E5E8EC de 42 px, onglet actif en gras souligné 2 px. Vérifié à 1440, 1024 et 768 px ; mobile inchangé.
+
+## 26/11/2026 — Retours alignements, liens, largeur max
+- Cartes rôle (Métiers › Événementiel) : titres h3 sur 2 lignes réservées → « Rôle » aligné sur les 4 cartes.
+- Tableau comparatif (Approche) : en-tête « Approche A » sur fond #E5E8EC.
+- Notes H3 + texte (.yd-v2-notes, .yd-ms-notes) : subgrid, les paragraphes d'une même rangée démarrent à la même hauteur.
+- Liens texte (contenu, bandeau bas, pied de page) : soulignés au survol, #1033A8 sur fond clair.
+- Au-delà de 1440 px : agrandissement plafonné à 1600 px ; contenu centré, en-tête/onglets/pied de page sur toute la largeur (contenu de l'en-tête aligné sur la colonne).
+- Images : sources en 1× uniquement — exports @2x nécessaires pour la netteté sur écrans Retina.

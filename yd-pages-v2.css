@@ -1378,3 +1378,17 @@
   .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-header .yd-brand{gap:13px}
   .yd-site:is(.yd-final-h100,.yd-contact-page) .yd-tabs>div{gap:20px;padding-left:1px}
 }
+
+/* Retours 26/11 — alignements, en-tête « Approche A », survol des liens */
+.yd-final-h100 .yd-v2-compare>div.yd-v2-compare-head:not(.is-blue){background:#e5e8ec}
+@media(min-width:601px){
+  .yd-v2-notes>article,.yd-ms-notes:not(.yd-ms-fire-buildings *)>article{display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0;align-content:start}
+  .yd-v2-notes>article>p,.yd-ms-notes>article>p{align-self:start}
+  .yd-final-h100 .yd-ms-fire-buildings .yd-ms-notes h3{min-height:64px}
+  .yd-final-h100 .yd-ms-event-services .yd-ms-card-body h3{min-height:66px}
+}
+.yd-site :is(.yd-main,.yd-bottom,.yd-footer) a:not([class]):not(:has(img)){text-decoration-thickness:1px;text-underline-offset:4px;transition:color .15s}
+.yd-site :is(.yd-main,.yd-bottom,.yd-footer) a:not([class]):not(:has(img)):hover,
+.yd-site :is(.yd-main,.yd-bottom,.yd-footer) a:not([class]):not(:has(img)):focus-visible{text-decoration-line:underline}
+.yd-site .yd-main a:not([class]):not(:has(img)):hover{color:#1033a8}
+.yd-site .yd-main :is(.yd-hp-hero,.yd-home-hero,.yd-v2-highlight,[class*="dark"]) a:not([class]):hover{color:inherit}
